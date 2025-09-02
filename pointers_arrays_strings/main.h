@@ -15,5 +15,7 @@ int _strlen(char *s);
 void _puts(char *str);
 /* _putchar.c */
 int _putchar(char c);
+/* 4-print_rev.c */
+void print_rev(char *s);
 
 #endif /* MAIN_H */
