@@ -9,5 +9,7 @@ void reset_to_98(int *n);
 char *_strcat(char *dest, char *src);
 /* 1-swap.c */
 void swap_int(int *a, int *b);
+/* 2-strlen.c */
+int _strlen(char *s);
 
 #endif /* MAIN_H */
