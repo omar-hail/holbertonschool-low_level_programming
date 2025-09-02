@@ -19,5 +19,7 @@ int _putchar(char c);
 void print_rev(char *s);
 /* 5-rev_string.c */
 void rev_string(char *s);
+/* 6-puts2.c */
+void puts2(char *str);
 
 #endif /* MAIN_H */
