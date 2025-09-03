@@ -27,8 +27,6 @@ void print_array(int *a, int n);
 char *_strcpy(char *dest, char *src);
 /* 100-atoi.c */
 int _atoi(char *s);
-/* 8-rot13.c */
-char *rot13(char *str);
 /* 0-strcat.c */
 char *_strcat(char *dest, char *src);
 /* 1-strncat.c */
@@ -45,5 +43,9 @@ char *string_toupper(char *str);
 char *cap_string(char *str);
 /* 7-leet.c */
 char *leet(char *str);
+/* 8-rot13.c */
+char *rot13(char *str);
+/* 101-print_number.c */
+void print_number(int n);
 
 #endif /* MAIN_H */
