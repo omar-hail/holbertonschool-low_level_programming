@@ -27,5 +27,9 @@ void puts_half(char *str);
 void print_array(int *a, int n);
 /* 9-strcpy.c */
 char *_strcpy(char *dest, char *src);
+/* 100-atoi.c */
+int _atoi(char *s);
+/* 8-rot13.c */
+char *rot13(char *str);
 
 #endif /* MAIN_H */
