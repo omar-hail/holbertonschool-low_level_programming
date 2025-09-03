@@ -5,8 +5,6 @@
 
 /* 0-reset_to_98.c */
 void reset_to_98(int *n);
-/* 0-strcat.c */
-char *_strcat(char *dest, char *src);
 /* 1-swap.c */
 void swap_int(int *a, int *b);
 /* 2-strlen.c */
@@ -31,5 +29,9 @@ char *_strcpy(char *dest, char *src);
 int _atoi(char *s);
 /* 8-rot13.c */
 char *rot13(char *str);
+/* 0-strcat.c */
+char *_strcat(char *dest, char *src);
+/* 1-strncat.c */
+char *_strncat(char *dest, char *src, int n);
 
 #endif /* MAIN_H */

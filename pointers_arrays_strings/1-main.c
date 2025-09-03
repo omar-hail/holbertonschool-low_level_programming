@@ -1,20 +1,20 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
 int main(void)
 {
-    int a;
-    int b;
+    char dest[100] = "Hello, ";
+    char src[] = "World!";
+    int n = 3;
 
-    a = 98;
-    b = 42;
-    printf("a=%d, b=%d\n", a, b);
-    swap_int(&a, &b);
-    printf("a=%d, b=%d\n", a, b);
-    return (0);
+    printf("Before _strncat:\n");
+    printf("dest = \"%s\"\n", dest);
+    printf("src = \"%s\"\n", src);
+
+    _strncat(dest, src, n);
+
+    printf("After _strncat (concatenate %d chars):\n", n);
+    printf("dest = \"%s\"\n", dest);
+
+    return 0;
 }
