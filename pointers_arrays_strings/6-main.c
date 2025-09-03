@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -7,9 +8,9 @@
  */
 int main(void)
 {
-    char *str;
+    char str[] = "do not approach catwoman i warn you";
 
-    str = "0123456789";
-    puts2(str);
+    printf("%s\n", cap_string(str));
+
     return (0);
 }
