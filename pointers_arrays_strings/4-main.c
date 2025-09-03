@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -7,9 +8,15 @@
  */
 int main(void)
 {
-    char *str;
+    int arr[] = {1, 2, 3, 4, 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int i;
 
-    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-    print_rev(str);
+    reverse_array(arr, n);
+
+    for (i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
+
     return (0);
 }
