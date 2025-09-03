@@ -1,18 +1,20 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
 int main(void)
 {
-    char *str;
-    int len;
+    char dest[15] = "HelloWorld";
+    char src[] = "ABC";
+    int n = 5;
 
-    str = "My first strlen!";
-    len = _strlen(str);
-    printf("%d\n", len);
-    return (0);
+    printf("Before _strncpy:\n");
+    printf("dest = \"%s\"\n", dest);
+    printf("src = \"%s\"\n", src);
+
+    _strncpy(dest, src, n);
+
+    printf("After _strncpy (copy %d chars):\n", n);
+    printf("dest = \"%s\"\n", dest);
+
+    return 0;
 }
