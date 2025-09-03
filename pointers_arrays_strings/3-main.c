@@ -1,15 +1,15 @@
 #include "main.h"
+#include <stdio.h>
 
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
 int main(void)
 {
-    char *str;
+    char *s1 = "I";
+    char *s2 = "am";
+    char *s3 = "Batman";
 
-    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-    _puts(str);
+    printf("%d\n", _strcmp(s1, s2));
+    printf("%d\n", _strcmp(s2, s3));
+    printf("%d\n", _strcmp(s3, s1));
+
     return (0);
 }
