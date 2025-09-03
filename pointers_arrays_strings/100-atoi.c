@@ -1,28 +1,41 @@
 #include "main.h"
 
 /**
- * rot13 - encodes a string using ROT13
- * @s: string to encode
+ * _atoi - Converts a string to an integer
+ * @s: String to be converted
  *
- * Return: pointer to s
+ * Return: The integer value of the string, or 0 if no valid number is found
  */
-char *rot13(char *s)
+int _atoi(char *s)
 {
-	int i, j;
-	char in[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char out[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int sign = 1;
+	int result = 0;
+	int i = 0;
+	int digit;
 
-	for (i = 0; s[i]; i++)
+	/* Skip non-digit characters and process signs */
+	while (s[i] && (s[i] < '0' || s[i] > '9'))
 	{
-		for (j = 0; in[j]; j++)
-		{
-			if (s[i] == in[j])
-			{
-				s[i] = out[j];
-				break;
-			}
-		}
+		if (s[i] == '-')
+			sign *= -1;
+		else if (s[i] == '+')
+			sign *= 1;
+		i++;
 	}
 
-	return (s);
+	/* Convert digits to integer with overflow check */
+	while (s[i] >= '0' && s[i] <= '9')
+	{
+		digit = s[i] - '0';
+		if (result > (2147483647 - digit) / 10)
+		{
+			if (sign == 1)
+				return (2147483647);
+			return (-2147483648);
+		}
+		result = result * 10 + digit;
+		i++;
+	}
+
+	return (sign * result);
 }
