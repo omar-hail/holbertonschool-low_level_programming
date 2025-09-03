@@ -23,5 +23,7 @@ void rev_string(char *s);
 void puts2(char *str);
 /* 7-puts_half.c */
 void puts_half(char *str);
+/* 8-print_array.c */
+void print_array(int *a, int n);
 
 #endif /* MAIN_H */
