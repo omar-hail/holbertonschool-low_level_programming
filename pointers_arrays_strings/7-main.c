@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -7,9 +8,9 @@
  */
 int main(void)
 {
-    char *str;
+    char str[] = "are you real";
 
-    str = "0123456789";
-    puts_half(str);
+    printf("%s\n", leet(str));
+
     return (0);
 }

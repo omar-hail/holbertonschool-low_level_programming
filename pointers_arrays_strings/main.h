@@ -43,5 +43,7 @@ void reverse_array(int *a, int n);
 char *string_toupper(char *str);
 /* 6-cap_string.c */
 char *cap_string(char *str);
+/* 7-leet.c */
+char *leet(char *str);
 
 #endif /* MAIN_H */
