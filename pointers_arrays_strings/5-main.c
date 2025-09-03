@@ -8,10 +8,9 @@
  */
 int main(void)
 {
-    char s[10] = "My School";
-
-    printf("%s\n", s);
-    rev_string(s);
-    printf("%s\n", s);
+    char str[] = "Hi catwoman";
+    
+    printf("%s\n", string_toupper(str));
+    
     return (0);
 }
