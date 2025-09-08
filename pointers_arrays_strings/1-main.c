@@ -1,20 +1,28 @@
 #include <stdio.h>
 #include "main.h"
 
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+    unsigned int a;
+
+    for (a = 0; a < n; a++)
+    {
+        dest[a] = src[a];
+    }
+
+    return (dest);
+}
+
 int main(void)
 {
-    char dest[100] = "Hello, ";
-    char src[] = "World!";
-    int n = 3;
+    char src[] = "Hello, World!";
+    char dest[20];
 
-    printf("Before _strncat:\n");
-    printf("dest = \"%s\"\n", dest);
-    printf("src = \"%s\"\n", src);
+    printf("قبل النسخ: dest = \"%s\"\n", dest);
 
-    _strncat(dest, src, n);
+    _memcpy(dest, src, 13);
 
-    printf("After _strncat (concatenate %d chars):\n", n);
-    printf("dest = \"%s\"\n", dest);
+    printf("بعد النسخ: dest = \"%s\"\n", dest);
 
     return 0;
 }
