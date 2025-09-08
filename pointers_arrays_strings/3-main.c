@@ -1,15 +1,39 @@
-#include "main.h"
 #include <stdio.h>
+#include "holberton.h"
+
+unsigned int _strspn(char *s, char *accept)
+{
+    unsigned int count = 0;
+    int i, j;
+    int found;
+
+    for (i = 0; s[i] != '\0'; i++)
+    {
+        found = 0;
+        for (j = 0; accept[j] != '\0'; j++)
+        {
+            if (s[i] == accept[j])
+            {
+                found = 1;
+                break;
+            }
+        }
+        if (!found)
+            break;
+        count++;
+    }
+
+    return count;
+}
 
 int main(void)
 {
-    char *s1 = "I";
-    char *s2 = "am";
-    char *s3 = "Batman";
+    char s[] = "abcde12345";
+    char accept[] = "abcde";
 
-    printf("%d\n", _strcmp(s1, s2));
-    printf("%d\n", _strcmp(s2, s3));
-    printf("%d\n", _strcmp(s3, s1));
+    unsigned int result = _strspn(s, accept);
 
-    return (0);
+    printf("Number of bytes in initial segment: %u\n", result);
+
+    return 0;
 }
