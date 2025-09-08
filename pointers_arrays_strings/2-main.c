@@ -1,20 +1,39 @@
 #include <stdio.h>
-#include "main.h"
+#include "holberton.h"
+
+char *_strchr(char *s, char c)
+{
+    int a = 0, b;
+
+    while (s[a])
+    {
+        a++;
+    }
+
+    for (b = 0; b <= a; b++)
+    {
+        if (c == s[b])
+        {
+            s += b;
+            return (s);
+        }
+    }
+
+    return (NULL);
+}
 
 int main(void)
 {
-    char dest[15] = "HelloWorld";
-    char src[] = "ABC";
-    int n = 5;
+    char str[] = "Hello, World!";
+    char c = 'W';
+    char *result;
 
-    printf("Before _strncpy:\n");
-    printf("dest = \"%s\"\n", dest);
-    printf("src = \"%s\"\n", src);
+    result = _strchr(str, c);
 
-    _strncpy(dest, src, n);
-
-    printf("After _strncpy (copy %d chars):\n", n);
-    printf("dest = \"%s\"\n", dest);
+    if (result != NULL)
+        printf("Character '%c' found at: %s\n", c, result);
+    else
+        printf("Character '%c' not found.\n", c);
 
     return 0;
 }
