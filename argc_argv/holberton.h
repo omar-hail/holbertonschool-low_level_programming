@@ -2,5 +2,7 @@
 #define HOLBERTON_H
 
 /* Add any function prototypes here if needed */
+/* No function prototypes needed for this program */
+
 
 #endif /* HOLBERTON_H */
