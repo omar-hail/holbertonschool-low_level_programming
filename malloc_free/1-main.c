@@ -21,6 +21,6 @@ int main(void)
     printf("Original: %s\n", original);
     printf("Copy    : %s\n", copy);
 
-    free(copy); // Always free dynamically allocated memory
+    free(copy); /* Always free dynamically allocated memory */
     return (0);
 }
