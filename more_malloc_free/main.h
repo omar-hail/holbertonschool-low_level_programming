@@ -1,6 +1,5 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
-
+#ifndef MAIN_H
+#define MAIN_H
 
 /* 0-malloc_checked.c */
 void *malloc_checked(unsigned int b);
@@ -24,6 +23,4 @@ int _strlen(char *s);
 void errors(void);
 void multiply(char *num1, char *num2);
 
-
-#endif /* HOLBERTON_H */
-
+#endif /* MAIN_H */
