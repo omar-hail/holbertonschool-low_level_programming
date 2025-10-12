@@ -1,20 +1,43 @@
 #include "main.h"
 
 /**
- * print_dlistint -  print doubly linked list
- * @h: the head
- * Return: the number of nodes in the list
+ * read_textfile - function that reads a text file and prints
+ * @filename: pointer to the file
+ * @letters: number of letters it should read and print
+ * Return: the actual number of letters it could read and print
  */
-size_t print_dlistint(const dlistint_t *h)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
-	size_t n = 0;
+	int fd, rd, wr;
+	char *buf;
 
-	while (h)
+	if (!filename)
+		return (0);
+
+	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+		return (0);
+
+	buf = malloc(sizeof(char) * letters);
+	if (!buf)
 	{
-		printf("%i\n", h->n);
-		h = h->next;
-		n++;
+		close(fd);
+		return (0);
 	}
 
-	return (n);
+	rd = read(fd, buf, letters);
+	close(fd);
+	if (rd == -1)
+	{
+		free(buf);
+		return (0);
+	}
+
+	wr = write(STDOUT_FILENO,  buf, rd);
+	free(buf);
+
+	if (rd != wr)
+		return (0);
+
+	return (wr);
 }
